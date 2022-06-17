@@ -3,11 +3,11 @@ def parse(query: str) -> dict:
 
 
 if __name__ == '__main__':
-    assert parse('https://example.com/path/to/page?name=ferret&color=purple') == {'name': 'ferret', 'color': 'purple'}
-    assert parse('https://example.com/path/to/page?name=ferret&color=purple&') == {'name': 'ferret', 'color': 'purple'}
+    assert parse('https://example.com/path/to/page?name=elephant&color=pink') == {'name': 'elephant', 'color': 'pink'}
+    assert parse('https://example.com/path/to/page?name=elephant&color=pink&') == {'name': 'elephant', 'color': 'pink'}
     assert parse('http://example.com/') == {}
     assert parse('http://example.com/?') == {}
-    assert parse('http://example.com/?name=Dima') == {'name': 'Dima'}
+    assert parse('http://example.com/?name=Rima') == {'name': 'Rima'}
 
 
 def parse_cookie(query: str) -> dict:
