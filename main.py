@@ -3,8 +3,8 @@ def parse(query: str) -> dict:
 
 
 if __name__ == '__main__':
-    assert parse('https://example.com/path/to/page?name=snake&color=purple') == {'name': 'snake', 'color': 'purple'}
-    assert parse('https://example.com/path/to/page?name=snake&color=purple&') == {'name': 'snake', 'color': 'purple'}
+    assert parse('https://example.com/path/to/page?form=ball&color=white') == {'form': 'ball', 'color': 'white'}
+    assert parse('https://example.com/path/to/page?form=ball&color=white&') == {'name': 'snake', 'color': 'white'}
     assert parse('http://example.com/') == {}
     assert parse('http://example.com/?') == {}
     assert parse('http://example.com/?name=Lyuska') == {'name': 'Lyuska'}
